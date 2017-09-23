@@ -26,6 +26,7 @@ $width: 109.5px;
 $height: 147px;
 
 .card {
+  display: inline-block;
   width: $width;
   height: $height;
   background-image: url('/asset/back.png');

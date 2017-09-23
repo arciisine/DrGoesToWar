@@ -1,3 +1,5 @@
+import { DECK } from "./deck";
+
 export class Board {
   node: HTMLDivElement;
   cards: HTMLElement[];
@@ -12,11 +14,11 @@ export class Board {
 
     this.node.classList.add('board');
 
-
-    let card = document.createElement('div');
-    card.classList.add('card', 'card-4-13');
-
-    this.node.appendChild(card);
+    for (let c of DECK) {
+      let card = document.createElement('div');
+      card.classList.add('card', 'card-' + c.suit + '-' + c.rank);
+      this.node.appendChild(card);
+    }
 
     let blank = document.createElement('div');
     blank.classList.add('card');
