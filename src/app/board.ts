@@ -1,5 +1,3 @@
-export type Cell = 'X' | 'O' | '';
-
 export class Board {
   node: HTMLDivElement;
   cards: HTMLElement[];
